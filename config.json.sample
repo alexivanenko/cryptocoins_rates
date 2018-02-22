@@ -1,0 +1,18 @@
+{
+  "bot_token": "your_token_here",
+
+  "coins": {
+    "BTC": "bitcoin",
+    "ETH": "ethereum",
+    "BCH": "bitcoin-cash",
+    "XRP": "ripple",
+    "XLM": "stellar"
+  },
+
+  "db": {
+    "server": "127.0.0.1",
+    "name": "crypto_coins",
+    "user": "crypto_coin",
+    "pass": "12345"
+  }
+}
