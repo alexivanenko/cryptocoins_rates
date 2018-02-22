@@ -1,0 +1,5 @@
+python_telegram_bot==9.0.0
+timezonefinder==2.1.2
+coinmarketcap==4.2.1
+pymongo==3.6.0
+telegram==0.0.1
