@@ -1,4 +1,4 @@
-from enum import Enum, auto
+from enum import Enum
 from app_config import app
 from model import user
 from cmd import helper
@@ -7,10 +7,10 @@ from telegram.ext import ConversationHandler
 
 
 class AddCoinStates(Enum):
-    ADD = auto()
-    COMPLETE_ADD = auto()
-    REMOVE = auto()
-    COMPLETE_REMOVE = auto()
+    ADD = 1
+    COMPLETE_ADD = 2
+    REMOVE = 3
+    COMPLETE_REMOVE = 4
 
 
 def build_menu(buttons, cols_num=1):

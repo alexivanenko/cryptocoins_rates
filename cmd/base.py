@@ -1,4 +1,4 @@
-from enum import Enum, auto
+from enum import Enum
 from geo import time
 from model import user
 from cmd import coins
@@ -9,7 +9,7 @@ DEFAULT_TIME_ZONE = "Europe/Moscow"
 
 
 class CmdStates(Enum):
-    START_SAVE_USER = auto()
+    START_SAVE_USER = 1
 
 
 def start(bot, update):
