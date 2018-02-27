@@ -27,3 +27,5 @@ Run the bot in the background:
 ```sh
 $ nohup ./python cryptocoins_bot.py & 
 ```
+
+If you want to send crypto coins rates to users 3 times per day please add the cryptocoins_rates_manager.py to the crontab - setup every minute cron job.  
