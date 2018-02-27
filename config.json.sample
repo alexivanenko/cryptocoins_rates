@@ -14,5 +14,6 @@
     "name": "crypto_coins",
     "user": "crypto_coin",
     "pass": "12345"
-  }
+  },
+  "notification_times": ["10:00", "15:00", "21:00"]
 }

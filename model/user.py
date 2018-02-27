@@ -103,3 +103,12 @@ def remove_coin(chat_id, coin):
         result = coins
 
     return result
+
+
+def get_all():
+    """
+    Load all users
+
+    :return: list of users
+    """
+    return get_db().users.find({})

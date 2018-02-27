@@ -210,3 +210,35 @@ def remove_coin(bot, update):
     )
 
     return AddCoinStates.COMPLETE_REMOVE
+
+
+def send_rates(bot, crypto_user):
+    """
+    Send selected crypto coins rates to user
+    :param bot:
+    :param model.user crypto_user:
+    :return: None
+    """
+    user_coins = crypto_user['coins']
+
+    if user_coins:
+        msg = "Your favourite Crypto Coins:\n"
+        all_coins = app.get_config().get('coins')
+
+        for coin in user_coins:
+            rate = ""
+            coin_id = ""
+
+            if coin in all_coins:
+                coin_id = all_coins[coin]
+                rate = helper.get_coin_rate(coin_id)
+                rate = "$" + rate
+
+            msg += "<b>["+coin+"] "+coin_id.title()+": "+rate+"</b>\n"
+
+        bot.send_message(
+            chat_id=crypto_user['chat_id'],
+            text=msg,
+            parse_mode="HTML",
+            reply_markup=default_keyboard()
+        )
