@@ -4,10 +4,14 @@ import os
 
 __author__ = 'ivanenkoa@gmail.com'
 
-if not os.path.isfile("config.json"):
+script_dir = os.path.dirname(os.path.abspath(__file__))
+script_dir = script_dir.replace("app_config", "")
+conf_path = os.path.join(script_dir, 'config.json')
+
+if not os.path.isfile(conf_path):
     exit("config.json file not found")
 
-with open("config.json") as config_file:
+with open(conf_path) as config_file:
     CONFIG = json.load(config_file)
 
 if len(CONFIG["bot_token"]) == 0:
